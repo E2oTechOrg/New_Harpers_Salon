@@ -12,6 +12,355 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* ========== Top Navigation ========== */
+.top-nav {
+    height: 80px;
+    transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+}
+
+/* Navbar links */
+.top-nav .navbar-nav li .nav-link {
+    color: #ffffff;
+    font-size: 18px;         
+    padding:6px 26px;        
+    margin:6px 5px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+}
+
+/* Hover & Active */
+.top-nav li a.nav-link:hover,
+.top-nav .nav-item.active a.nav-link {
+    color: #fff;
+    background-color: #B47F41;
+	border-color: #B47F41;
+	border-radius: 50px;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+
+/* Logo */
+.top-nav .navbar-brand {
+    padding: 0;
+    display: flex;
+    align-items: center;
+	font-size: 28px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* .top-nav .search-box li a.nav-link{
+	border:1px solid #B47F41;
+	padding: 6px 15px;
+} */
+
+.nav-logo {
+	margin-top: 20px;
+    height: 120px;              
+    width: 200px;
+    object-fit: contain;
+}
+
+/* Brand text (if used) */
+.brand-text {
+    font-weight: 700;
+    color: #fff;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+/* Scrolled / Sticky header */
+.top-nav.light-header {
+    height: 80px;
+	background: rgba(0,0,0,0.6);
+	box-shadow: 0 0 10px rgba(0,0,0,0.23);
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	z-index: 9999;
+}
+
+/* Light header logo */
+.top-nav.light-header .nav-logo {
+	margin-top: 10px;
+    height: 100px;              
+    width: 200px;
+    object-fit: contain;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    .top-nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-logo {
+        height: 45px;
+    }
+
+    .top-nav .navbar-nav li .nav-link {
+        font-size: 15px;
+        padding: 10px 20px;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/* ================= EXTRA MOBILE RESPONSIVE FIXES ================= */
+
+/* Fix logo overflow & navbar height on tablets & mobiles */
+@media (max-width: 992px) {
+
+    .nav-logo {
+        margin-top: 0;
+        height: 80px;
+        width: auto;
+    }
+
+    .top-nav {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .top-nav.light-header .nav-logo {
+        height: 70px;
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+
+    .nav-logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .top-nav.light-header .nav-logo {
+        height: 55px;
+    }
+
+    .navbar-toggler {
+        padding: 4px 8px;
+    }
+
+    .top-nav .navbar-nav {
+        padding-top: 10px;
+    }
+
+    .top-nav .navbar-nav li .nav-link {
+        padding: 12px 15px;
+        margin: 4px 0;
+        font-size: 14px;
+    }
+}
+
+/* ================= Footer Base ================= */
+.footer {
+    background: linear-gradient(180deg, #121212 0%, #1c1c1c 100%);
+    padding: 80px 0 40px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    clear: both;
+}
+
+.footer-block {
+    background-color: #1f1f1f;
+    padding: 50px 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= Widget ================= */
+.footer-widget {
+    margin-bottom: 35px;
+}
+
+.footer-widget .widget-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-widget .widget-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #B47F41;
+}
+
+.footer-widget p,
+.footer-widget li,
+.footer-widget a {
+    color: #b5b5b5;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* ================= Remove Bullets ================= */
+.footer-widget ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* ================= Contact ================= */
+.footer .contact li {
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 14px;
+}
+
+.footer .contact li i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #B47F41;
+    font-size: 16px;
+}
+
+/* ================= Quick Menu ================= */
+.footer-widget ul li a {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-widget ul li a:hover {
+    color: #B47F41;
+    padding-left: 6px;
+	text-decoration: none;
+}
+
+/* ================= Social Icons ================= */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    background: #2a2a2a;
+    color: #B47F41;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #B47F41;
+    color: #121212;
+    transform: translateY(-2px);
+	text-decoration: none;
+}
+
+/* ================= Tiny Footer ================= */
+.tiny-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #2f2f2f;
+    text-align: center;
+}
+
+.copyright-content {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= Footer Map ================= */
+.footer-map {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    filter: grayscale(100%) contrast(1.1);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .footer-map iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-map iframe {
+        height: 220px;
+    }
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 991px) {
+    .footer-block {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-widget {
+        text-align: center;
+    }
+
+    .footer-widget .widget-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer .contact li {
+        padding-left: 0;
+    }
+
+    .footer .contact li i {
+        position: relative;
+        margin-right: 8px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-block {
+        padding: 35px 20px;
+    }
+}
+
+
 /* ========== Universal Stylings ========== */
 h1,h2,h3,h4,h5{
 	position: relative;
@@ -37,6 +386,7 @@ h6{
 }
 a.text-primary{
 	color: #B47F41;
+    font-size: 22px;
 }
 a.text-primary:hover{
 	color: #916634!important;
@@ -211,66 +561,6 @@ i.box-circle-solid{
     vertical-align: middle;
 }
 
-
-
-
-/* ========== Top Navigation ========== */
-.top-nav {
-    height: 80px;
-    transition: 0.2s ease-in;
-	-webkit-transition: 0.2s ease-in;
-	-moz-transition: 0.2s ease-in;
-}
-.top-nav .navbar-nav li .nav-link {
-    color: #fff;
-    font-size: 14px;
-    padding:6px 26px;
-    margin:6px 5px 0;
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: 0.2s ease-in;
-	-webkit-transition: 0.2s ease-in;
-	-moz-transition: 0.2s ease-in;
-}
-.top-nav li a.nav-link:hover, .top-nav .nav-item.active a.nav-link{
-    color: #fff;
-    background-color: #B47F41;
-	border-color: #B47F41;
-	border-radius: 50px;
-    transition: 0.5s ease-in;
-	-webkit-transition: 0.5s ease-in;
-	-moz-transition: 0.5s ease-in;
-}
-.top-nav .navbar-brand{
-	font-size: 28px;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-}
-.top-nav .search-box li a.nav-link{
-	border:1px solid #B47F41;
-	padding: 6px 15px;
-}
-.top-nav.light-header{
-	height: 60px;
-	background: rgba(0,0,0,0.6);
-	box-shadow: 0 0 10px rgba(0,0,0,0.23);
-	transition: 0.5s ease-in;
-	-webkit-transition: 0.5s ease-in;
-	-moz-transition: 0.5s ease-in;
-	z-index: 9999;
-}
-.top-nav.light-header .navbar-brand{
-	color: #fff;
-}
-
-.top-nav.light-header .search-box li a.nav-link{
-	padding: 6px 15px;
-	border:1px solid #fff;
-}
-.top-nav.light-header .search-box li a.nav-link i{
-	color:#fff!important;
-}
-
 /* ========== Intro Header ========== */
 .intro{
 	float: left;
@@ -302,6 +592,7 @@ i.box-circle-solid{
 	font-weight: 700;
 	font-family: 'Abril Fatface', cursive;
 	font-size: 3.8rem;
+    margin-bottom: 10px;
 }
 .intro-caption .btn i{
 	float: left;
@@ -321,110 +612,234 @@ i.box-circle-solid{
 	top:25%;
 }
 
-/* ========== Who We Are ========== */
-
-.info-section{
-	float: left;
-	width:100%;
-	padding:5rem 0;
-	position: relative;
-	z-index: 1;
-}
-.info-section h2{
-	font-weight: 700;
-	font-size: 3rem;
-}
-.info-section .price-count{
-	font-size: 2.5rem;
-}
-
-.info-section .head-sec{
-	float: left;
-	width:100%;
-}
-
-.info-section .service-block-bg{
-	background-color: rgba(180,127,65,0.4);
-}
-.info-section .service-block-bg:hover{
-	background-color: rgba(180,127,65,1);
-}
-
-.info-section h3{
-	font-size: 1.4rem;
-}
-.info-section p {
-    font-size: 1rem;
-    line-height: 1.3rem;
-}
-.info-section .box h2{
-    font-size:24px;
-    margin-bottom:20px;
-    margin-top:0;
-}
-
-.info-section .box i{
-    font-size:20px;
-}
-.info-section .box{
-    display:flex;
-}
-.info-section .text-box{
-    flex:1 1 0;
-    text-align:left;
-}
-.info-section .icon-box{
-    line-height: 1.2;
-    width:70px;
-}
-.info-section .service-block-overlay{
-	transition: .5s;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-}
-.info-section .service-block-overlay:hover{
-	background: #fff none repeat scroll 0 0;
-    border-radius: 5px;
-    box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
-    float: left;
-    margin-top: -10px;
-    position: relative;
+/* ========== Who We Are / About Section Fixed ========== */
+.info-section {
     width: 100%;
-	transition: .5s;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
+    padding: 5rem 0;
+    position: relative;
+    background-color: #0f0a05; /* Dark professional background */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
-.info-section .service-block i img{
-	width:50px;
+
+.info-section h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #B47F41;
+    text-align: center;
 }
-.content-half{
-    color:#fff;
+
+.info-section .service-block-bg {
+    background-color: rgba(180,127,65,0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: 0.4s;
 }
-.content-half ul{
-    padding:0;
-    list-style:none;
+
+.info-section .service-block-bg:hover {
+    background-color: rgba(180,127,65,0.9);
 }
-.content-half ul li{
-    margin:15px 0;
-    float:left;
-    width:100%;
+
+.info-section .box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
-.content-half ul li i{
-    float:left;
-    font-size:30px;
-    padding-top:10px;
-    padding-bottom:10px;
+
+.info-section .box h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
 }
-.content-half ul li .list-content{
-    float:left;
-    margin-left:20px;
+
+.info-section .box i {
+    font-size: 28px;
+    color: #B47F41;
+    flex-shrink: 0;
 }
-.content-half ul li strong{
-    font-size:19px;
-    font-weight:700;
+
+.info-section .text-box {
+    flex: 1;
+    text-align: left;
 }
-.content-half .btn{
-    margin-top:20px;
+
+/* ========== About Section – CLEAN LIST (FIXED) ========== */
+
+ul.content-half {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-top: 10px;
+}
+
+ul.content-half li {
+    font-size: 18px;      /* BIGGER TEXT */
+    line-height: 1.2;
+    color: #818181;
+    margin-bottom: 1.2rem;
+    padding-left: 40px;
+}
+
+.content-half .btn {
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    background-color: #B47F41;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.content-half .btn:hover {
+    background-color: #916634;
+    color: #fff;
+}
+
+/* ===== About Section – Highlight Line ===== */
+#about .about-highlight {
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    /* text-align: center; */
+
+    /* keeps it in ONE LINE
+    white-space: nowrap; */
+}
+
+/* Background overlay (grey effect) */
+#price.bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(15, 10, 5, 0.65);
+    z-index: -1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .service-block-bg img {
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
+}
+
+/* General Service Card */
+.service-card {
+    background: rgba(30, 20, 10, 0.75);
+    border-radius: 16px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    background: rgba(180,127,65,0.95);
+}
+
+/* Service Images */
+.service-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255,215,0,0.6);
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.6rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Service Paragraph */
+.service-card p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+/* Service List */
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+.service-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffeabf;
+}
+.service-list li::before {
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+
+/* Overlay Background */
+#price.bg-overlay::before {
+    background-color: rgba(10, 10, 10, 0.6);
+}
+
+
+/* Overlay effect on Services Section */
+#price.bg-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+#price.bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 10, 5, 0.65); /* grey / dark overlay */
+    z-index: -1; /* keep behind content */
+}
+
+
+
+/* Desktop enhancement */
+@media (min-width: 992px) {
+    .service-block-bg img {
+        height: 300px;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .service-block-bg img {
+        height: 220px;
+        border-radius: 10px;
+    }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* pause on hover */
+.service-slider:hover .service-track {
+    animation-play-state: paused;
+}
+
+/* -------- Responsive -------- */
+@media(max-width: 992px){
+    .info-section .box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-section h2 {
+        text-align: center;
+    }
 }
 /*--- three Block Panel ---*/
 .three-panel-block{
@@ -610,7 +1025,7 @@ transition:1s ease-in;
 	color: #fff;
 }
 
-/* ========== trust Section ========== */
+/* ========== trust Section ==========
 .trust-section{
 	float: left;
 	width:100%;
@@ -651,7 +1066,14 @@ transition:1s ease-in;
 .trust-section .single-trust .carousel-control-next:hover, .trust-section .single-trust .carousel-control-prev:hover{
 	background-color: #b47f41;
 	color: #fff;
+} */
+
+.trust-section h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ab7231; /* Gold accent */
 }
+
 
 /* ========== Hygiene Section ========== */
 .hygiene-section {
@@ -709,6 +1131,29 @@ transition:1s ease-in;
     font-size: 18px;
 }
 
+/* Overlay Background */
+#hygiene.bg-overlay::before {
+    background-color: rgba(10, 10, 10, 0.6);
+}
+
+
+/* Overlay effect on Services Section */
+#hygiene.bg-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+#hygiene.bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 10, 5, 0.65); /* grey / dark overlay */
+    z-index: -1; /* keep behind content */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hygiene-section h2 {
@@ -747,7 +1192,7 @@ transition:1s ease-in;
     top: 0px;
 }
 .mission-section .single-mission .carousel-control-next, .mission-section .single-mission .carousel-control-prev{
-	 border: 1px solid #b47f41;
+	border: 1px solid #b47f41;
     border-radius: 50%;
     color: #b47f41;
     display: block;
@@ -759,12 +1204,18 @@ transition:1s ease-in;
     position: relative;
     width: 43%;
 }
+.mission-section .single-mission .carousel-control-next:hover, .mission-section .single-mission .carousel-control-prev{
+	background-color: #f1a146;
+}
+
 .mission-section .single-mission .carousel-control-next:hover, .mission-section .single-mission .carousel-control-prev:hover{
-	background-color: #b47f41;
+	background-color: #935918;
 	color: #fff;
 }
 
-* ========== visit Section ========== */
+
+
+/* ========== visit Section ========== */
 .visit-section{
 	float: left;
 	width:100%;
@@ -807,82 +1258,86 @@ transition:1s ease-in;
 	color: #fff;
 }
 
-* ========== faq Section ========== */
-.faq-section{
-	float: left;
-	width:100%;
-	position: relative;
-	z-index: 1;
-}
-.faq-section h2{
-	font-size: 3rem;
-}
-.faq-section .single-faq .carousel-item {
-    margin: 0 15%;
-    width: 70%;
-}
-.faq-section .single-faq .carousel-item-next, .faq-section .single-faq .carousel-item-prev{
-	top:3rem;
-}
-.faq-section .single-faq .carousel{
-	text-align: center;
-}
-.faq-section .single-faq .navigator-box{
-	display: inline-block;
-	position: relative;
-    top: 0px;
-}
-.faq-section .single-faq .carousel-control-next, .faq-section .single-faq .carousel-control-prev{
-	 border: 1px solid #b47f41;
-    border-radius: 50%;
-    color: #b47f41;
-    display: block;
-    float: left;
-    font-size: 37px;
-    margin: 0 4px;
-    opacity: 1;
-    padding: 0 23px;
-    position: relative;
-    width: 43%;
-}
-.faq-section .single-faq .carousel-control-next:hover, .faq-section .single-faq .carousel-control-prev:hover{
-	background-color: #b47f41;
-	color: #fff;
+/* Overlay Background */
+#visit .bg-overlay::before {
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
-/* ========== Copy Content Styles ========== */
-.copy-content-sec{
-	float: left;
-	width:100%;
-	padding:5rem 0;
-	position: relative;
-	z-index: 1;
+
+/* Overlay effect on Services Section */
+#visit .bg-overlay {
+    position: relative;
+    z-index: 1;
 }
-.copy-content-sec h2{
-	font-size: 3rem;
+
+#visit .bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 10, 5, 0.65); /* grey / dark overlay */
+    z-index: -1; /* keep behind content */
 }
-.copy-container{
-	display: flex;
-	align-items: center;
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    background-color: #1a1410; /* dark background */
+    color: #fff;
+    padding: 5rem 0;
 }
-.copy-content{
-	float: left;
-	width:100%;
+
+.faq-section h2 {
+    font-size: 3rem;
+    color: #b47f41; /* orange heading */
+    margin-bottom: 1rem;
 }
-.copy-content li i{
-	float: left;
-	width:30px;
-	margin-top:5px;
-	color: #5CB85C;
+
+.faq-section .lead {
+    font-size: 1.1rem;
+    color: #ffd8a6; /* soft cream text */
+    margin-bottom: 3rem;
 }
-.faq-box .card{
-	border-color: #35CBDF;	
-	margin-top: 10px;
+
+/* Accordion Buttons */
+.accordion-button {
+    background-color: rgba(255, 127, 42, 0.08); /* light orange */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    transition: all 0.3s;
 }
-.faq-box .card-header{
-	background-color: #35CBDF;
-	color: #fff;
+
+.accordion-button p {
+    margin: 0;
+    font-size: 1.2rem; /* adjustable question font size */
+    color: #fff;
 }
+
+/* Opened Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 127, 42, 0.2); /* darker orange when open */
+    color: #ff7f2a;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Accordion Body */
+.accordion-body {
+    background-color: rgba(255, 127, 42, 0.05); /* very light orange */
+    color: #ffd8a6; /* readable text */
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 
 /* ========== Price Table Styles ========== */
@@ -1029,141 +1484,7 @@ transition:1s ease-in;
 }
 
 
-/* ================= Footer Base ================= */
-.footer {
-    background: linear-gradient(180deg, #121212 0%, #1c1c1c 100%);
-    padding: 80px 0 40px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    clear: both;
-}
 
-.footer-block {
-    background-color: #1f1f1f;
-    padding: 50px 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* ================= Widget ================= */
-.footer-widget {
-    margin-bottom: 30px;
-}
-
-.footer-widget .widget-title {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-widget .widget-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: #B47F41;
-}
-
-.footer-widget p,
-.footer-widget li,
-.footer-widget a {
-    color: #b5b5b5;
-    font-size: 14px;
-    line-height: 28px;
-}
-
-/* ================= Remove Bullets ================= */
-.footer-widget ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* ================= Contact ================= */
-.footer .contact li {
-    position: relative;
-    padding-left: 38px;
-    margin-bottom: 12px;
-}
-
-.footer .contact li i {
-    position: absolute;
-    left: 0;
-    top: 4px;
-    color: #B47F41;
-    font-size: 16px;
-}
-
-/* ================= Quick Menu ================= */
-.footer-widget ul li a {
-    display: inline-block;
-    transition: 0.3s ease;
-}
-
-.footer-widget ul li a:hover {
-    color: #B47F41;
-    padding-left: 5px;
-}
-
-/* ================= Social Icons ================= */
-.social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    width: 38px;
-    height: 38px;
-    background: #2a2a2a;
-    color: #B47F41;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #B47F41;
-    color: #121212;
-    transform: translateY(-2px);
-}
-
-
-/* ================= Tiny Footer ================= */
-.tiny-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #2f2f2f;
-    text-align: center;
-}
-
-.copyright-content {
-    color: #888;
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-/* ================= Responsive ================= */
-@media (max-width: 768px) {
-    .footer-block {
-        padding: 40px 25px;
-    }
-
-    .footer-widget .widget-title {
-        font-size: 16px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
 
 /* ========== Blog Page Styles ========== */
 
@@ -1276,3 +1597,96 @@ transition:1s ease-in;
     }
 }
 
+.services-modern {
+    width: 100%;
+    background: #ffffff;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    width: 50%;
+    height: 100%;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-content {
+    width: 50%;
+    padding: 80px;
+}
+
+.service-content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.service-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.service-content ul {
+    padding-left: 18px;
+    margin-bottom: 35px;
+}
+
+.service-content ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.service-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 2px solid #111;
+    color: #111;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.service-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+    }
+
+    .service-image,
+    .service-content {
+        width: 100%;
+    }
+
+    .service-content {
+        padding: 40px 25px;
+    }
+
+    .service-content h2 {
+        font-size: 38px;
+    }
+}
