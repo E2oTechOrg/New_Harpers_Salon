@@ -55,3 +55,33 @@ fetch("header.html")
     // Call function to set active class after navbar is loaded
     setActiveNav();
   });
+
+  
+document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const parent = btn.parentElement;
+        const answer = parent.querySelector(".faq-answer");
+
+        // Close other FAQ items
+        document.querySelectorAll(".faq-item").forEach(item => {
+            if(item !== parent){
+                item.classList.remove("active");
+                const ans = item.querySelector(".faq-answer");
+                ans.style.height = 0;
+            }
+        });
+
+        // Toggle current
+        if(parent.classList.contains("active")){
+            // Close it
+            parent.classList.remove("active");
+            answer.style.height = 0;
+        } else {
+            // Open it smoothly
+            parent.classList.add("active");
+            answer.style.height = answer.scrollHeight + "px";
+        }
+    });
+});
+
+
