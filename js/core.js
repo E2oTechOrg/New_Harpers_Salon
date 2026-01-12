@@ -85,3 +85,14 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 });
 
 
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#leadPopup").fadeIn();
+        }, 1500);
+
+        $(".popup-close").click(function () {
+            $("#leadPopup").fadeOut();
+        });
+    });
+
+
