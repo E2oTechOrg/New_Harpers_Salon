@@ -3068,3 +3068,378 @@ h1, h2 {
     height: 220px;
   }
 }
+
+
+/* ================= Letter Wrapper ================= */
+.letter-wrapper {
+    padding: 120px 15px;
+    background: radial-gradient(circle at top, #ffffff 0%, #e6e6e6 65%);
+}
+
+/* ================= Paper ================= */
+.letter-paper {
+    max-width: 960px;
+    margin: auto;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+    padding: 90px 75px;
+    border-radius: 18px;
+    box-shadow:
+        0 35px 70px rgba(0,0,0,0.15),
+        inset 0 0 0 1px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ornamental border */
+.letter-paper::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border-radius: 16px;
+    border: 1px dashed rgba(0,0,0,0.35);
+    pointer-events: none;
+}
+
+/* Corner ornament */
+.letter-paper::after {
+    content: "✦";
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.45);
+}
+
+/* ================= Header ================= */
+.letter-head {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.letter-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 2.6rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.letter-head h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 18px;
+}
+
+/* Black divider */
+.letter-head h1::after {
+    content: "✦ ✦ ✦";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    letter-spacing: 10px;
+    color: rgba(0,0,0,0.6);
+}
+
+/* ================= Intro ================= */
+.letter-intro {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+    line-height: 2.05;
+    color: #222;
+    margin-bottom: 70px;
+    text-align: justify;
+    margin-top:-40px;
+}
+
+/* ================= Sections ================= */
+.letter-section {
+    position: relative;
+    padding-left: 95px;
+    margin-bottom: 70px;
+}
+
+/* Vertical timeline */
+.letter-section::before {
+    content: "";
+    position: absolute;
+    left: 42px;
+    top: 55px;
+    width: 1px;
+    height: calc(100% - 55px);
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0)
+    );
+}
+
+.letter-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+/* Section number */
+.sec-no {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-family: 'Cinzel', serif;
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: rgba(0,0,0,0.25);
+}
+
+/* Paragraphs */
+.letter-section p {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+    line-height: 1.95;
+    color: #222;
+    margin-bottom: 14px;
+}
+
+/* ================= Lists ================= */
+.letter-section ul {
+    padding-left: 0;
+    margin-top: 16px;
+}
+
+.letter-section ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 14px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+/* Minimal diamond bullets */
+.letter-section ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+/* Nested list */
+.letter-section ul ul {
+    margin-top: 10px;
+    padding-left: 22px;
+}
+
+/* ================= Signature ================= */
+.letter-sign {
+    text-align: right;
+    margin-top: 90px;
+}
+
+.letter-sign::before {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 2px;
+    background: #000;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+
+.letter-sign p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 991px) {
+    .letter-paper {
+        padding: 55px;
+    }
+
+    .letter-section {
+        padding-left: 65px;
+    }
+
+    .sec-no {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .letter-paper {
+        padding: 32px 24px;
+    }
+
+    .letter-head h1 {
+        font-size: 2.1rem;
+    }
+
+    .letter-section {
+        padding-left: 0;
+    }
+
+    .letter-section::before {
+        display: none;
+    }
+
+    .sec-no {
+        position: relative;
+        display: block;
+        margin-bottom: 6px;
+    }
+}
+
+
+/* ===== Blog Left Float Layout ===== */
+.bw-blog-left-wrap {
+    background: #fff;
+    color: #111;
+    font-family: 'Georgia', serif;
+    padding: 80px 20px;
+}
+
+.bw-blog-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header */
+.bw-blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bw-blog-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.bw-blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.bw-blog-meta {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Content with left-floating image */
+.bw-blog-content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.bw-blog-left-img {
+    float: none;               /* Remove float to take full width */
+    width: 100%;               /* Full width of the container */
+    height: 400px;              /* Maintain aspect ratio automatically */
+    max-width: 100%;           /* Ensure it doesn’t exceed container */
+    margin: 0 0 30px 0;        /* Space below the image */
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.bw-blog-left-img:hover {
+    transform: scale(1.02);    /* Subtle zoom on hover */
+}
+
+/* Text content */
+.bw-blog-content {
+    overflow: hidden; /* clears float */
+}
+
+.bw-blog-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: #222;
+}
+
+/* Intro paragraph style */
+.bw-intro {
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-left: 4px solid #111;
+    padding-left: 18px;
+    margin-bottom: 28px;
+}
+
+/* Headings */
+.bw-blog-content h2 {
+    font-size: 1.7rem;
+    margin: 50px 0 18px;
+    color: #111;
+    position: relative;
+}
+
+.bw-blog-content h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #111;
+    margin-top: 6px;
+}
+
+.bw-blog-content h3 {
+    font-size: 1.35rem;
+    margin: 30px 0 15px;
+}
+
+/* Lists */
+.bw-list,
+.bw-steps {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.bw-list li,
+.bw-steps li {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* Quote */
+.bw-quote {
+    margin: 50px 0;
+    padding-left: 25px;
+    border-left: 4px solid #111;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .bw-blog-left-img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 25px 0;
+    }
+}
