@@ -411,12 +411,29 @@ body{
 }
 
 .about-points .point{
+    display: inline-block; /* fits the box to the text */
+    background-color: #7b7b7b; /* black background */
 	padding-left: 40px;
 	position: relative;
 	font-size: 1.2rem;
-	color: #8b8b8b;
+	color: #ffffff;
     line-height: 1.2;
 }
+
+/* ================= ABOUT POINTS SINGLE BACKGROUND ================= */
+.about-points {
+    background-color: #7b7b7b;   /* single background for all points */
+    padding: 30px 28px;
+    border-radius: 12px;
+}
+
+/* Remove individual background effect visually */
+.about-points .point {
+    background-color: transparent;
+    display: block;
+    color: #ffffff;
+}
+
 
 /* custom icon */
 .about-points .point::before{
@@ -440,6 +457,140 @@ body{
     border-radius: 5px; /* optional: rounded corners */
     margin-top: -10px; /* adjust vertical spacing */
 }
+
+
+/* ================= MOBILE VIEW FIX ================= */
+@media (max-width: 768px) {
+
+    /* ========== INTRO SECTION ========== */
+    .intro {
+        height: 100%;
+        padding: 80px 18px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .intro-bg {
+        background-position: center;
+    }
+
+    .caption-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .caption-two-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 2.4rem;
+        line-height: 1.25;
+        margin: 0 0 25px 0;
+        margin-left: 0; /* remove desktop offset */
+    }
+
+    .intro-caption {
+        max-width: 100%;
+        padding-left: 0; /* remove desktop offset */
+    }
+
+    .intro-caption p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .intro .carousel-item {
+        height: auto;
+        min-height: 90vh;
+    }
+
+    .intro .carousel-caption {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .btn {
+        padding: 14px 26px;
+        font-size: 0.95rem;
+    }
+
+    /* ========== ABOUT SECTION ========== */
+    .about-section {
+        min-height: auto;
+        background-size: cover; /* fill screen nicely on mobile */
+        background-position: center top;
+        padding: 80px 20px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .about-content h2 {
+        font-size: 2.4rem;
+        margin-bottom: 18px;
+    }
+
+    .about-content h2::after {
+        width: 50px;
+        height: 3px;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    
+    .about-points {
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .about-points .point {
+        font-size: 1.05rem;
+        padding-left: 30px;
+        line-height: 1.4;
+    }
+
+    .about-points .point::before {
+        font-size: 1rem;
+        top: 2px;
+    }
+
+    .about-highlight {
+        font-size: 1.05rem;
+        padding: 10px 16px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
+
+/* ================= SMALL MOBILE (EXTRA COMPACT) ================= */
+@media (max-width: 480px) {
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 2.1rem;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+    }
+
+    .about-points .point {
+        font-size: 1rem;
+    }
+
+    .about-highlight {
+        font-size: 1rem;
+    }
+}
+
 
 
 /* ========== Services Section ========== */
@@ -2926,6 +3077,194 @@ h1, h2 {
   }
 }
 
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 991px) {
+
+  /* ===== SERVICES MODERN ===== */
+  .services-modern {
+    padding: 60px 20px;
+    gap: 60px;
+  }
+
+  .services-modern > div {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .services-modern > div:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .services-modern > div:nth-child(even) .service-image {
+    order: 0;
+  }
+
+  .service-image {
+    height: 320px;
+  }
+
+  .services-modern h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .services-modern p {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .services-modern ul {
+    justify-items: center;
+  }
+
+  .services-modern ul li {
+    text-align: left;
+    max-width: 420px;
+  }
+
+  .service-btn {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+
+  /* ===== SERVICE EXTRA ===== */
+  .service-extra {
+    padding: 70px 20px;
+    gap: 60px;
+  }
+
+  .extra-block {
+    padding: 40px 30px;
+  }
+
+  .extra-block h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .extra-block p {
+    font-size: 1.05rem;
+  }
+
+  /* ===== GROOMING PACKAGES ===== */
+  .package-block {
+    padding: 60px 20px;
+  }
+
+  .package-row {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .package-card {
+    max-width: 100%;
+  }
+
+  /* ===== WHY CHOOSE US ===== */
+  .choose-us {
+    padding: 60px 20px;
+  }
+
+  .choose-us h2 {
+    font-size: 2.2rem;
+  }
+
+  .choose-row {
+    justify-content: center;
+  }
+
+  .choose-card {
+    max-width: 320px;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .service-cta {
+    margin: 60px 20px;
+    padding: 60px 25px;
+  }
+
+  .service-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+
+  /* ===== SERVICE VISUAL GRID ===== */
+  .service-visual {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 70px 20px;
+    gap: 25px;
+  }
+
+  .service-card h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 576px) {
+
+  .services-modern {
+    padding: 50px 16px;
+    gap: 50px;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .services-modern h2 {
+    font-size: 1.9rem;
+  }
+
+  .services-modern p {
+    font-size: 1rem;
+  }
+
+  .extra-block {
+    padding: 32px 22px;
+  }
+
+  .extra-block h2 {
+    font-size: 1.9rem;
+  }
+
+  .package-card {
+    padding: 30px 20px;
+  }
+
+  .choose-number {
+    font-size: 2.8rem;
+  }
+
+  .choose-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 30px 22px;
+  }
+
+  .service-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p,
+  .service-card ul li {
+    font-size: 0.98rem;
+  }
+}
+
+
+
 /* ---------- TRUST & HYGIENE ---------- */
 @media (max-width: 991px) {
   .trust-section,
@@ -3441,5 +3780,124 @@ h1, h2 {
         width: 100%;
         max-width: 100%;
         margin: 0 0 25px 0;
+    }
+}
+
+
+/* ================= BLOG MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+    /* Wrapper */
+    .bw-blog-left-wrap {
+        padding: 50px 16px;
+    }
+
+    .bw-blog-container {
+        max-width: 100%;
+    }
+
+    /* Header */
+    .bw-blog-header {
+        margin-bottom: 35px;
+    }
+
+    .bw-blog-tag {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .bw-blog-title {
+        font-size: 1.9rem;
+        line-height: 1.35;
+    }
+
+    .bw-blog-meta {
+        font-size: 0.85rem;
+    }
+
+    /* Image */
+    .bw-blog-left-img {
+        width: 100%;
+        max-width: 100%;
+        height: 240px;
+        margin: 0 0 22px 0;
+        border-radius: 10px;
+    }
+
+    /* Content */
+    .bw-blog-content p {
+        font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 18px;
+    }
+
+    /* Intro paragraph */
+    .bw-intro {
+        font-size: 1.05rem;
+        padding-left: 14px;
+        border-left-width: 3px;
+    }
+
+    /* Headings */
+    .bw-blog-content h2 {
+        font-size: 1.45rem;
+        margin: 36px 0 14px;
+    }
+
+    .bw-blog-content h2::after {
+        width: 40px;
+    }
+
+    .bw-blog-content h3 {
+        font-size: 1.2rem;
+        margin: 24px 0 12px;
+    }
+
+    /* Lists */
+    .bw-list,
+    .bw-steps {
+        padding-left: 18px;
+    }
+
+    .bw-list li,
+    .bw-steps li {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    /* Quote */
+    .bw-quote {
+        font-size: 1.1rem;
+        margin: 35px 0;
+        padding-left: 18px;
+        border-left-width: 3px;
+    }
+}
+
+/* ================= SMALL MOBILE (EXTRA COMPACT) ================= */
+@media (max-width: 480px) {
+
+    .bw-blog-title {
+        font-size: 1.65rem;
+    }
+
+    .bw-blog-left-img {
+        height: 200px;
+    }
+
+    .bw-blog-content p {
+        font-size: 0.95rem;
+    }
+
+    .bw-blog-content h2 {
+        font-size: 1.35rem;
+    }
+
+    .bw-blog-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .bw-quote {
+        font-size: 1.05rem;
     }
 }
