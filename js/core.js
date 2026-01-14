@@ -85,32 +85,55 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 });
 
 
-    $(document).ready(function () {
-        setTimeout(function () {
-            $("#leadPopup").fadeIn();
-        }, 1500);
-
-        $(".popup-close").click(function () {
-            $("#leadPopup").fadeOut();
-        });
+$(document).ready(function () {
+   
+    $(document).on("click", ".open-lead-popup", function (e) {
+        e.preventDefault();
+        $("#leadPopup").fadeIn();
     });
 
-
-$(document).ready(function () {
-
-    // Auto popup after 1.5s
-    setTimeout(function () {
-        $("#leadPopup").fadeIn();
-    }, 1500);
-
-    // Close popup
-    $(".popup-close").click(function () {
+    $(document).on("click", ".popup-close", function () {
         $("#leadPopup").fadeOut();
     });
 
-    // Open popup on button click
-    $("#bookAppointmentBtn").click(function () {
-        $("#leadPopup").fadeIn();
-    });
-
 });
+
+
+
+    // $(document).ready(function () {
+    //     setTimeout(function () {
+    //         $("#leadPopup").fadeIn();
+    //     }, 1500);
+
+    //     $(".popup-close").click(function () {
+    //         $("#leadPopup").fadeOut();
+    //     });
+    // });
+
+
+// $(document).ready(function () {
+
+//     // Auto popup after 1.5s
+//     setTimeout(function () {
+//         $("#leadPopup").fadeIn();
+//     }, 1500);
+
+//     // Close popup
+//     $(".popup-close").click(function () {
+//         $("#leadPopup").fadeOut();
+//     });
+
+//     // Open popup on button click
+//     $("#bookAppointmentBtn").click(function () {
+//         $("#leadPopup").fadeIn();
+//     });
+
+// });
+
+
+
+//  setTimeout(function () {
+//         $("#leadPopup").fadeIn();
+//     }, 1500);
+
+
