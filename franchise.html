@@ -51,7 +51,7 @@ rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <div class="container">
         <h1>Start Your Own <span>New Harpers Salon</span></h1>
         <p>Partner with a trusted premium men’s grooming brand</p>
-        <a href="index.html" class="btn btn-primary">Apply for Franchise</a>
+        <a href="javascript:void(0)" class="btn btn-primary text-white mr-3" id="bookAppointmentBtn">Apply for Franchise</a>
     </div>
 </section>
 
@@ -150,6 +150,88 @@ rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 
 
 <div id="footer"></div>
+
+
+<!-- ===== POPUP MODAL ===== -->
+<div id="leadPopup" class="popup-overlay">
+    <div class="popup-box">
+
+        <!-- CLOSE BUTTON -->
+        <span class="popup-close">&times;</span>
+
+        <!-- LEFT IMAGE -->
+        <div class="popup-left">
+            <img src="img/pop-up.jpg" alt="Salon Offer">
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="popup-right">
+            <h3>Book Your Appointment</h3>
+
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address">
+                
+                <select required>
+                    <option value="">Select Your Area</option>
+                    <option>Anna Nagar</option>
+                    <option>KK Nagar</option>
+                    <option>Madurai Central</option>
+                    <option>Arappalayam</option>
+                    <option>Andalpuram</option>
+                    <option>Avaniyapuram</option>
+                    <option>Bye Pass Road</option>
+                    <option>Chinna Chokkikulam</option>
+                    <option>Ellis Nagar</option>
+                    <option>East Veli Street</option>
+                    <option>South Veli Street</option>
+                    <option>West Veli Street</option>
+                    <option>North Veli Street</option>
+                    <option>Iyer Bungalow</option>
+                    <option>K Pudur</option>
+                    <option>Kochadai</option>
+                    <option>Koodal Nagar</option>
+                    <option>Melamadai</option>
+                    <option>Othakkadai</option>
+                    <option>Pasumalai</option>
+                    <option>Ponnmeni</option>
+                    <option>SS Colony</option>
+                    <option>Sammattipuram</option>
+                    <option>Thirunagar</option>
+                    <option>Thiruparankundram</option>
+                    <option>TVS Nagar</option>
+                    <option>Uthangudi</option>
+                    <option>Vandiyur</option>
+                    <option>Vilangudi</option>
+                    <option>Balaji Nagar</option>
+                    <option>Mahatma Gandhi Nagar</option>
+                    <option>Duraisamy Nagar</option>
+                    <option>Vishwanathapuram</option>
+                    <option>Thai Moogambigai Nagar</option>
+                    <option>Narimedu</option>
+                    <option>Tallakulam</option>
+                    <option>Bibikulam</option>
+                    <option>Alagappan Nagar</option>
+                    <option>Villapuram</option>
+                    <option>Silaiman</option>
+                    <option>Samayanallur</option>
+                    <option>Melur Road Area</option>
+                    <option>Ring Road Area</option>
+                    <option>Airport Area</option>
+                    <option>Mattuthavani</option>
+                    <option>Periyar Bus Stand Area</option>
+                    <option>Goripalayam</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit">SEND YOUR DETAILS</button>
+                <small>We never share your data</small>
+            </form>
+        </div>
+
+    </div>
+</div>
 
 
 <!-- Javascript Files  -->
