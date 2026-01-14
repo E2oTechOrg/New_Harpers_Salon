@@ -33,6 +33,25 @@ $(window).scroll(function() {
     }
 });
 
+// Nav Bar Touch
+$(document).ready(function () {
+
+    // Close menu when clicking outside navbar
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest(".navbar").length) {
+            $(".navbar-collapse").collapse("hide");
+        }
+    });
+
+    // Close menu when clicking a nav link
+    $(".navbar-nav .nav-link").on("click", function () {
+        $(".navbar-collapse").collapse("hide");
+    });
+
+});
+
+
+
 // Year for copy content
 $(function(){
 var theYear = new Date().getFullYear();
@@ -135,5 +154,6 @@ $(document).ready(function () {
 //  setTimeout(function () {
 //         $("#leadPopup").fadeIn();
 //     }, 1500);
+
 
 
