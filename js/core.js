@@ -96,3 +96,21 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     });
 
 
+$(document).ready(function () {
+
+    // Auto popup after 1.5s
+    setTimeout(function () {
+        $("#leadPopup").fadeIn();
+    }, 1500);
+
+    // Close popup
+    $(".popup-close").click(function () {
+        $("#leadPopup").fadeOut();
+    });
+
+    // Open popup on button click
+    $("#bookAppointmentBtn").click(function () {
+        $("#leadPopup").fadeIn();
+    });
+
+});
