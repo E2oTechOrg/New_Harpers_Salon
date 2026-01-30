@@ -84,8 +84,8 @@ h2 {
 }
 
 .nav-logo {
-    margin-top: 10px;
-    height: 120px;
+    margin-top: 0px;
+    height: 90px;
     width: 200px;
     object-fit: contain;
 }
