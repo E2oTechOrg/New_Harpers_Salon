@@ -103,8 +103,7 @@ h2 {
 
 /* Light header logo */
 .top-nav.light-header .nav-logo {
-    margin-top: 10px;
-    height: 100px;
+    height: 80px;
     width: 200px;
     object-fit: contain;
 }
